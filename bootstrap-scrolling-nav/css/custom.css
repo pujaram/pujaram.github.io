@@ -27,6 +27,15 @@ header {
     background-color: #e3cd56;
 }
 
+#skills {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#skills h2, #skills-chart {
+    margin-bottom: 50px;
+}
+
 .btn-social {
     display: inline-block;
     width: 40px;

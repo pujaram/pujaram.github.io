@@ -49,7 +49,7 @@
         </nav>
 
         <header class="bg-light">
-            <div class="container text-center shadow-sm p-5 mb-5 bg-white rounded">
+            <div class="container text-center shadow p-5 mb-5 bg-white rounded">
                 <h1>PUJA RAMANATHAN</h1>
                 <p class="lead">Insert quote of the day from an API here</p>
             </div>
@@ -69,14 +69,14 @@
         <section id="skills" class="bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>Skills</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="shadow p-5 mb-5 bg-white rounded">Skills</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <canvas id="skills-chart" width="400" height="400"></canvas>
+                    <canvas id="skills-chart" width="300" height="120"></canvas>
                 </div>
+                <p class="lead text-sm-center">I created this website using technologies like Bootstrap and Chart.js.</p>
             </div>
         </section>
 
@@ -108,12 +108,36 @@
                     }]
                 },
                 options: {
+                    title: {
+                        display: false,
+                    },
+                    animation: {
+                        duration: 3000,
+                        animation: true,
+                        animationSteps: 100,
+                        animationEasing: "easeOutElastic"
+                    },
                     scales: {
                         xAxes: [{
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                display: false
                             }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                            ticks: {
+                                fontSize: 20,
+                                fontFamily: "'Courier New', 'Courier', 'Century Gothic', 'sans-serif', 'Helvetica Neue', 'Helvetica', 'Arial'",
+                            },
+                            barPercentage: 0.7,
+                            categoryPercentage: 1.0
                         }]
+                    },
+                    legend: {
+                        display: false
                     }
                 }
             });
