@@ -13,6 +13,9 @@
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <!-- Chart.js for flexible, animated graphs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
         <title>Puja's Portfolio</title>
     </head>
     <body id="page-top">
@@ -71,8 +74,50 @@
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
                     </div>
                 </div>
+                <div class="row">
+                    <canvas id="skills-chart" width="400" height="400"></canvas>
+                </div>
             </div>
         </section>
+
+        <script>
+            var chartElement = document.getElementById("skills-chart");
+
+            var chart = new Chart(chartElement, {
+                type: 'horizontalBar',
+                data: {
+                    labels: ["Java", "HTML / CSS", "JavaScript", "SQL", "PHP"],
+                    datasets: [{
+                        // label: '# of Votes',
+                        data: [10, 10, 8, 6, 4],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
 
         <section id="projects">
             <div class="container">
