@@ -1,22 +1,31 @@
 /* This is a custom stylesheet to design my portfolio. */
 
-@import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Open+Sans');
-
-/*.fa {
-    font-size: 24px;
-    color: white;
-    border-radius: 50%;
-    padding: 10px;
-    border: 1px solid white;
-    #e3cd56 #e3cd56 #e7d46f;
-}*/
+@import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Open+Sans|Arvo');
 
 header {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     word-wrap: break-word;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: solid;
+    border-bottom-color: #e3cd56;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 
 .bg-light-blue {
@@ -27,13 +36,76 @@ header {
     background-color: #e3cd56;
 }
 
-#skills {
-    padding-top: 50px;
-    padding-bottom: 100px;
+.bg-img {
+    background: #000000 url(../../images/teal-legos.jpg) 100% 100% repeat;
+    filter: brightness(70%);
+    height: 50%;
 }
 
-#skills h2, #skills-chart {
+.bg-img:hover {
+    filter: brightness(100%);
+    transition: all .3s ease-in-out;
+}
+
+.title-box {
+    position: relative;
+    top: -14%;
+    transition: all 1s ease;
+}
+
+#graph {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    left: -5%;
+}
+
+/*header img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%);
+    filter: blur(2px);
+}*/
+
+/*header:not(header div) {
+    filter: brightness(60%);
+}
+
+header div {
+    opacity: 0.95;
+}*/
+
+#skills-chart {
     margin-bottom: 50px;
+}
+
+.project-card {
+    margin: 10px;
+    height: 215px;
+    width: 300px;
+}
+
+.project-card:hover,
+.project-card:focus {
+    cursor: pointer;
+}
+
+.front, .back {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arvo', 'Open Sans', 'Century Gothic', sans-serif;
+    font-size: 12pt;
+}
+
+.back {
+    font-size: 11pt;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .btn-social {
@@ -66,9 +138,7 @@ header {
 }
 
 .btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
+.btn-outline:focus {
     border: solid 1px #fff;
     color: darkslategray;
     background: #fff;

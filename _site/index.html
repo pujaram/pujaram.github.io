@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+
         <!-- Bootstrap navigation -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="bootstrap-scrolling-nav/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -15,6 +16,14 @@
 
         <!-- Chart.js for flexible, animated graphs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+        <!-- JQuery Flip -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+        <script src="quotes.js"></script>
+        <!-- <script src="imagehover.js"></script> -->
 
         <title>Puja's Portfolio</title>
     </head>
@@ -49,16 +58,17 @@
         </nav>
 
         <header class="bg-light">
-            <div class="container text-center shadow p-5 mb-5 bg-white rounded">
-                <h1>PUJA RAMANATHAN</h1>
-                <p class="lead">Insert quote of the day from an API here</p>
+            <div class="bg-img"></div>
+            <div class="container text-center shadow p-5 mb-5 bg-white rounded title-box vertical-align" onmouseenter="getAuthor()" onmouseleave="getQOD()">
+                <h1 class="text-uppercase">Puja Ramanathan</h1>
+                <blockquote id="quote" class="lead m-0"></blockquote>
             </div>
         </header>
 
         <section id="education">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-8 mx-auto text-center">
                         <h2>Education</h2>
                         <p class="lead">I am currently a junior majoring in computer science at the University of Washington, Seattle.</p>
                     </div>
@@ -70,13 +80,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="shadow p-5 mb-5 bg-white rounded">Skills</h2>
+                        <h2>Skills</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div id="graph" class="row">
                     <canvas id="skills-chart" width="300" height="120"></canvas>
                 </div>
-                <p class="lead text-sm-center">I created this website using technologies like Bootstrap and Chart.js.</p>
+                <p class="lead text-sm-center">Click here to see the technologies I used to build this website!</p>
             </div>
         </section>
 
@@ -146,18 +156,77 @@
         <section id="projects">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-8 mx-auto text-center">
                         <h2>Projects</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
                     </div>
                 </div>
+                <div id="project-container" class="row justify-content-center">
+                    <div class="project-card">
+                        <div class="front shadow-sm vertical-align">
+                            Undergraduate Research &mdash; Project Sidewalk
+                        </div>
+                        <div class="back shadow-sm vertical-align">
+                            I helped develop several new webpages for Project Sidewalk, a crowd-sourcing tool to map
+                            out and score the accessibility of different cities. I primarily used HTML, CSS, JQuery,
+                            and Scala to create a labeling guide for users.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="front shadow-sm vertical-align">
+                            Android Application
+                        </div>
+                        <div class="back shadow-sm vertical-align">
+                            I created an application in Android Studio called ScoreTracker, which keeps tracks of
+                            players' scores in games, particularly card games. In addition to tracking scores,
+                            there is a small analysis of the scores at the end of each game.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="front shadow-sm vertical-align">
+                            Kinspire Portal
+                        </div>
+                        <div class="back shadow-sm vertical-align">
+                            As a nonprofit organization that provides educational resources for underprivileged
+                            children in developing areas of India, I worked with a small group of people to create
+                            an interactive desktop application from start to finish. I helped with content, design
+                            (with wireframes), and development of the application.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="front shadow-sm vertical-align">
+                            Campus Maps
+                        </div>
+                        <div class="back shadow-sm vertical-align">
+                            I developed a mapping service for the UW Seattle campus that finds the shortest path between
+                            two buildings. I used Java to create the directed multi-graph that stored all the paths by
+                            distance and I used Swing to create the UI.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="front shadow-sm vertical-align">
+                            Prosthetic Hand
+                        </div>
+                        <div class="back shadow-sm vertical-align">
+                            I collaborated with a small group to research, design, 3D print, revise, and finalize a
+                            prosthetic hand. After 3D printing the segments of the fingers and the palm of the hand,
+                            I used specific circuits of an Arduino kit to program the hand to open and close.
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    jQuery(document).ready(function($){
+                        $(".project-card").flip({
+                            trigger: "hover"
+                        });
+                    });
+                </script>
             </div>
         </section>
 
         <section id="activities" class="bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-8 mx-auto text-center">
                         <h2>Activities</h2>
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
                     </div>
@@ -177,7 +246,7 @@
                             <a href="mailto:pujaram@uw.edu" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/pujaram/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/pujaram/" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
