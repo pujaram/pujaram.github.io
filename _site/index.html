@@ -160,10 +160,10 @@
                         <h2>Projects</h2>
                     </div>
                 </div>
-                <div id="project-container" class="row justify-content-center">
+                <div class="row justify-content-center">
                     <div class="project-card">
                         <div class="front shadow-sm vertical-align">
-                            Undergraduate Research &mdash; Project Sidewalk
+                            Undergraduate Research &mdash; <br> Project Sidewalk
                         </div>
                         <div class="back shadow-sm vertical-align">
                             I helped develop several new webpages for Project Sidewalk, a crowd-sourcing tool to map
@@ -213,13 +213,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    jQuery(document).ready(function($){
-                        $(".project-card").flip({
-                            trigger: "hover"
-                        });
-                    });
-                </script>
             </div>
         </section>
 
@@ -228,11 +221,65 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2>Activities</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="activity-card">
+                        <div class="front shadow vertical-align">
+                            Web Programming Teaching Assistant
+                        </div>
+                        <div class="back shadow vertical-align">
+                            As a teaching assistant, I led course sections and programming labs twice a week.
+                            I also helped students in office hours every week, graded weekly assignments for ~20
+                            students, and graded course exams. This course introduces HTML, CSS, Javascript, PHP,
+                            and SQL.
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="front shadow vertical-align">
+                            Girls Who Code Committee Lead
+                        </div>
+                        <div class="back shadow vertical-align">
+                            As a committee lead, I organized events and workshops to promote computer science for
+                            students in high school or early college. I collaborated with a small group to generate
+                            ideas, plan, and execute these events. We worked as a branch of outreach for UW Society
+                            of Women Engineers.
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="front shadow vertical-align">
+                            Kinspire Logistics Coordinator
+                        </div>
+                        <div class="back shadow vertical-align">
+                            Kinspire is a nonprofit organization that provides educational resources for underprivileged
+                            orphans in India. As logistics coordinator, I contributed to generating ideas, planning
+                            events, and raising awareness around campus to fundraise and create new tools to improve
+                            the quality of education at the orphanages.
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="front shadow vertical-align">
+                            UW Raas Dance Team
+                        </div>
+                        <div class="back shadow vertical-align">
+                            I was part of an Indian dance team that performs a traditional folk dance that originates
+                            from Gujurat, India. We competed nationally last year in Chicago, IL and Austin, Texas!
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <script>
+            jQuery(document).ready(function($){
+                $(".project-card").flip({
+                    trigger: "hover"
+                });
+                $(".activity-card").flip({
+                    trigger: "hover"
+                });
+            });
+        </script>
 
         <!-- Footer -->
         <footer id="contact" class="text-center py-5 bg-gold">

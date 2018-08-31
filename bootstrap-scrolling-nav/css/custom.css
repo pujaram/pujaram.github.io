@@ -83,7 +83,13 @@ header div {
 .project-card {
     margin: 10px;
     height: 215px;
-    width: 300px;
+    width: 350px;
+}
+
+.activity-card {
+    margin: 10px;
+    height: 320px;
+    width: 240px;
 }
 
 .project-card:hover,
@@ -96,6 +102,12 @@ header div {
     text-align: center;
     font-family: 'Arvo', 'Open Sans', 'Century Gothic', sans-serif;
     font-size: 12pt;
+    background-color: white;
+}
+
+.project-card .front, .project-card .back {
+    border: solid;
+    border-color: #e3cd56;
 }
 
 .back {
