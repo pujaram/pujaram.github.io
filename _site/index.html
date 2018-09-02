@@ -19,10 +19,8 @@
 
         <!-- JQuery Flip -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
         <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
-        <script src="quotes.js"></script>
         <!-- <script src="imagehover.js"></script> -->
 
         <title>Puja's Portfolio</title>
@@ -32,7 +30,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light-blue fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">PUJA RAMANATHAN</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -59,7 +58,7 @@
 
         <header class="bg-light">
             <div class="bg-img"></div>
-            <div class="container text-center shadow p-5 mb-5 bg-white rounded title-box vertical-align" onmouseenter="getAuthor()" onmouseleave="getQOD()">
+            <div class="container text-center shadow p-5 mb-5 bg-white rounded title-box" onmouseenter="getAuthor()" onmouseleave="getQOD()">
                 <h1 class="text-uppercase">Puja Ramanathan</h1>
                 <blockquote id="quote" class="lead m-0"></blockquote>
             </div>
@@ -67,10 +66,61 @@
 
         <section id="education">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
+                <div id="edu-container" class="row">
+                    <div class="edu-card text-center">
                         <h2>Education</h2>
                         <p class="lead">I am currently a junior majoring in computer science at the University of Washington, Seattle.</p>
+                        <img src="images/allen-school-logo.png" alt="Paul G. Allen School of Computer Science logo" class="shadow" width="100%">
+                    </div>
+                    <div id="hex-container" class="edu-card">
+                        <div class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse143/17wi/handouts/01.html" target="_blank">
+                                    Java Programming
+                                </a>
+                            </p>
+                        </div>
+                        <div id="structures-course" class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse332/18wi/handouts/cse332-18wi-FirstDayHandout.pdf"
+                                   target="_blank">Data Structures & Parallelism</a>
+                            </p>
+                        </div>
+                        <div id="web-course" class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse154/17au/documents/154-syllabus.pdf" target="_blank">
+                                    Web Development
+                                </a>
+                            </p>
+                        </div>
+                        <div id="software-course" class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse331/18su/#materials" target="_blank">
+                                    Software Design & Implementation
+                                </a>
+                            </p>
+                        </div>
+                        <div id="hardware-course" class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse351/18sp/goals-and-syllabus.html" target="_blank">
+                                    Hardware / Software Interface
+                                </a>
+                            </p>
+                        </div>
+                        <div id="math-course" class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse311/17au/#schedule" target="_blank">
+                                    Discrete Mathematics
+                                </a>
+                            </p>
+                        </div>
+                        <div id="data-course" class="hexagon">
+                            <p class="text-center m-0">
+                                <a href="https://courses.cs.washington.edu/courses/cse344/18sp/#lectures" target="_blank">
+                                    Data Management
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,12 +171,6 @@
                     title: {
                         display: false,
                     },
-                    animation: {
-                        duration: 3000,
-                        animation: true,
-                        animationSteps: 100,
-                        animationEasing: "easeOutElastic"
-                    },
                     scales: {
                         xAxes: [{
                             ticks: {
@@ -162,30 +206,30 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="project-card">
-                        <div class="front shadow-sm vertical-align">
+                        <div class="front shadow-sm">
                             Undergraduate Research &mdash; <br> Project Sidewalk
                         </div>
-                        <div class="back shadow-sm vertical-align">
+                        <div class="back shadow-sm">
                             I helped develop several new webpages for Project Sidewalk, a crowd-sourcing tool to map
                             out and score the accessibility of different cities. I primarily used HTML, CSS, JQuery,
                             and Scala to create a labeling guide for users.
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="front shadow-sm vertical-align">
+                        <div class="front shadow-sm">
                             Android Application
                         </div>
-                        <div class="back shadow-sm vertical-align">
+                        <div class="back shadow-sm">
                             I created an application in Android Studio called ScoreTracker, which keeps tracks of
                             players' scores in games, particularly card games. In addition to tracking scores,
                             there is a small analysis of the scores at the end of each game.
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="front shadow-sm vertical-align">
+                        <div class="front shadow-sm">
                             Kinspire Portal
                         </div>
-                        <div class="back shadow-sm vertical-align">
+                        <div class="back shadow-sm">
                             As a nonprofit organization that provides educational resources for underprivileged
                             children in developing areas of India, I worked with a small group of people to create
                             an interactive desktop application from start to finish. I helped with content, design
@@ -193,20 +237,20 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="front shadow-sm vertical-align">
+                        <div class="front shadow-sm">
                             Campus Maps
                         </div>
-                        <div class="back shadow-sm vertical-align">
+                        <div class="back shadow-sm">
                             I developed a mapping service for the UW Seattle campus that finds the shortest path between
                             two buildings. I used Java to create the directed multi-graph that stored all the paths by
                             distance and I used Swing to create the UI.
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="front shadow-sm vertical-align">
+                        <div class="front shadow-sm">
                             Prosthetic Hand
                         </div>
-                        <div class="back shadow-sm vertical-align">
+                        <div class="back shadow-sm">
                             I collaborated with a small group to research, design, 3D print, revise, and finalize a
                             prosthetic hand. After 3D printing the segments of the fingers and the palm of the hand,
                             I used specific circuits of an Arduino kit to program the hand to open and close.
@@ -225,10 +269,10 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="activity-card">
-                        <div class="front shadow vertical-align">
+                        <div class="front shadow">
                             Web Programming Teaching Assistant
                         </div>
-                        <div class="back shadow vertical-align">
+                        <div class="back shadow">
                             As a teaching assistant, I led course sections and programming labs twice a week.
                             I also helped students in office hours every week, graded weekly assignments for ~20
                             students, and graded course exams. This course introduces HTML, CSS, Javascript, PHP,
@@ -236,10 +280,10 @@
                         </div>
                     </div>
                     <div class="activity-card">
-                        <div class="front shadow vertical-align">
+                        <div class="front shadow">
                             Girls Who Code Committee Lead
                         </div>
-                        <div class="back shadow vertical-align">
+                        <div class="back shadow">
                             As a committee lead, I organized events and workshops to promote computer science for
                             students in high school or early college. I collaborated with a small group to generate
                             ideas, plan, and execute these events. We worked as a branch of outreach for UW Society
@@ -247,10 +291,10 @@
                         </div>
                     </div>
                     <div class="activity-card">
-                        <div class="front shadow vertical-align">
+                        <div class="front shadow">
                             Kinspire Logistics Coordinator
                         </div>
-                        <div class="back shadow vertical-align">
+                        <div class="back shadow">
                             Kinspire is a nonprofit organization that provides educational resources for underprivileged
                             orphans in India. As logistics coordinator, I contributed to generating ideas, planning
                             events, and raising awareness around campus to fundraise and create new tools to improve
@@ -258,10 +302,10 @@
                         </div>
                     </div>
                     <div class="activity-card">
-                        <div class="front shadow vertical-align">
+                        <div class="front shadow">
                             UW Raas Dance Team
                         </div>
-                        <div class="back shadow vertical-align">
+                        <div class="back shadow">
                             I was part of an Indian dance team that performs a traditional folk dance that originates
                             from Gujurat, India. We competed nationally last year in Chicago, IL and Austin, Texas!
                         </div>
@@ -276,6 +320,7 @@
                     trigger: "hover"
                 });
                 $(".activity-card").flip({
+                    axis: "x",
                     trigger: "hover"
                 });
             });
@@ -285,15 +330,17 @@
         <footer id="contact" class="text-center py-5 bg-gold">
             <div class="container text-center text-white">
                 <p class="m-0 lead"><span class="first-letter">C</span>ONTACT <span class="first-letter">M</span>E</p>
-                    <!--<i class="fa fa-envelope-o"></i>
-                    <i class="fa fa-linkedin"></i> -->
                 <div class="row">
                     <ul class="list-inline">
                         <li>
-                            <a href="mailto:pujaram@uw.edu" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
+                            <a href="mailto:pujaram@uw.edu" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-envelope-o"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/pujaram/" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/pujaram/" class="btn-social btn-outline" target="_blank">
+                                <i class="fa fa-fw fa-linkedin"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -315,6 +362,8 @@
 
         <!-- Custom JavaScript for this theme -->
         <script src="bootstrap-scrolling-nav/js/scrolling-nav.js"></script>
+
+        <script src="quotes.js"></script>
 
     </body>
 </html>

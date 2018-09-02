@@ -1,6 +1,6 @@
 /* This is a custom stylesheet to design my portfolio. */
 
-@import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Open+Sans|Arvo');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Arvo|Abel|Encode+Sans+Condensed|Khand|News+Cycle');
 
 header {
     height: 100vh;
@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    width: 20%;
+    width: 175px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -25,7 +25,16 @@ h2 {
 
 section {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 125px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: darkslategray;
+    text-decoration: none;
 }
 
 .bg-light-blue {
@@ -51,6 +60,90 @@ section {
     position: relative;
     top: -14%;
     transition: all 1s ease;
+}
+
+#edu-container {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.edu-card>p {
+    margin-bottom: 10%;
+}
+
+.edu-card {
+    padding: 30px;
+    width: 50%;
+}
+
+/*#hex-container {
+    display: flex;
+}*/
+
+.hexagon {
+    position: relative;
+    width: 130px;
+    height: 75.06px;
+    background-color: #e3cd56;
+    margin: 0 5px;
+    color: white;
+    transform: rotate(30deg);
+    left: 35%;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 37.53px solid #e3cd56;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 37.53px solid #e3cd56;
+}
+
+.hexagon p {
+    transform: rotate(-30deg);
+    font-size: 12pt;
+    font-family: 'Abel', 'Encode Sans Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#structures-course {
+    left: calc(35% - 121px);
+    top: -5px;
+}
+
+#web-course {
+    top: -10px;
+}
+
+#software-course {
+    left: calc(35% + 121px);
+    top: -15px;
+}
+
+#hardware-course {
+    top: -20px;
+}
+
+#math-course {
+    left: calc(35% + 242px);
+    top: -96px;
+}
+
+#data-course {
+    left: calc(35% - 121px);
+    top: -100px;
 }
 
 #graph {
@@ -114,19 +207,21 @@ header div {
     font-size: 11pt;
 }
 
-.vertical-align {
+.title-box, .front, .back, .hexagon {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+
+/* Contact Panel */
 .btn-social {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 1px solid white;
-    padding: 5px;
+    padding: 10px;
     transition: all .3s ease-in-out;
 }
 
