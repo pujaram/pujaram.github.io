@@ -11,6 +11,8 @@ This JavaScript file fetches the quote of the day from Quotes REST API.
     window.onload = function () {
         blockquote = document.getElementById("quote");
         getQuote();
+        resizeSection();
+        window.onresize = resizeSection;
     };
 
     // blockquote = document.getElementById("quote");
@@ -56,6 +58,16 @@ This JavaScript file fetches the quote of the day from Quotes REST API.
     function getAuthor() {
         blockquote.style.color = "gray";
         blockquote.innerText = "- " + author;
+    }
+
+    function resizeSection() {
+        var educationWidth = document.getElementById("edu-text").offsetWidth;
+        var eduSection = document.getElementById("education");
+        if (educationWidth == 300) {
+            eduSection.style.paddingBottom = '350px';
+        } else {
+            eduSection.style.paddingBottom = '125px';
+        }
     }
 
 

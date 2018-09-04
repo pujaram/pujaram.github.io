@@ -6,6 +6,10 @@ header {
     height: 100vh;
     word-wrap: break-word;
     padding: 0;
+    background: #000000 url(../imgs/teal-legos.jpg) 100% 100% repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
@@ -45,27 +49,20 @@ a:hover {
     background-color: #e3cd56;
 }
 
-.bg-img {
-    background: #000000 url(../../images/teal-legos.jpg) 100% 100% repeat;
-    filter: brightness(70%);
-    height: 50%;
-}
-
 .bg-img:hover {
     filter: brightness(100%);
     transition: all .3s ease-in-out;
 }
 
 .title-box {
-    position: relative;
-    top: -14%;
-    transition: all 1s ease;
+    background: white;
+    opacity: 0.94;
 }
 
 #edu-container {
     display: flex;
     justify-content: space-around;
-    height: 500px;
+    height: 550px;
 }
 
 .edu-card>p {
@@ -75,11 +72,8 @@ a:hover {
 .edu-card {
     padding: 30px;
     width: 50%;
+    min-width: 300px;
 }
-
-/*#hex-container {
-    display: flex;
-}*/
 
 .hexagon {
     position: relative;
@@ -114,8 +108,12 @@ a:hover {
 
 .hexagon p {
     transform: rotate(-30deg);
-    font-size: 12pt;
-    font-family: 'Abel', 'Encode Sans Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 10pt;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#java-course {
+    margin-top: 10%;
 }
 
 #structures-course {
@@ -153,24 +151,21 @@ a:hover {
     left: -5%;
 }
 
-/*header img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    filter: brightness(60%);
-    filter: blur(2px);
-}*/
-
-/*header:not(header div) {
-    filter: brightness(60%);
-}
-
-header div {
-    opacity: 0.95;
-}*/
-
 #skills-chart {
     margin-bottom: 50px;
+}
+
+#modal-text {
+    color: #909090;
+    font-size: 1rem;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#modal-text:hover {
+    color: deepskyblue;
+    cursor: pointer;
 }
 
 .project-card {
@@ -183,6 +178,11 @@ header div {
     margin: 10px;
     height: 320px;
     width: 240px;
+}
+
+.date {
+    color: gray;
+    font-size: 0.75rem;
 }
 
 .project-card:hover,
@@ -207,7 +207,7 @@ header div {
     font-size: 11pt;
 }
 
-.title-box, .front, .back, .hexagon {
+.title-box, .front, .back, .hexagon, #edu-text {
     display: flex;
     flex-direction: column;
     justify-content: center;

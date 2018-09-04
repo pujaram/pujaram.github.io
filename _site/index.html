@@ -9,7 +9,7 @@
         <link href="bootstrap-scrolling-nav/css/scrolling-nav.css" rel="stylesheet">
 
         <!-- Custom stylesheet -->
-        <link rel="stylesheet" type="text/css" href="bootstrap-scrolling-nav/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
 
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,8 +20,6 @@
         <!-- JQuery Flip -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-
-        <!-- <script src="imagehover.js"></script> -->
 
         <title>Puja's Portfolio</title>
     </head>
@@ -57,7 +55,6 @@
         </nav>
 
         <header class="bg-light">
-            <div class="bg-img"></div>
             <div class="container text-center shadow p-5 mb-5 bg-white rounded title-box" onmouseenter="getAuthor()" onmouseleave="getQOD()">
                 <h1 class="text-uppercase">Puja Ramanathan</h1>
                 <blockquote id="quote" class="lead m-0"></blockquote>
@@ -67,13 +64,13 @@
         <section id="education">
             <div class="container">
                 <div id="edu-container" class="row">
-                    <div class="edu-card text-center">
+                    <div id="edu-text" class="edu-card text-center">
                         <h2>Education</h2>
                         <p class="lead">I am currently a junior majoring in computer science at the University of Washington, Seattle.</p>
-                        <img src="images/allen-school-logo.png" alt="Paul G. Allen School of Computer Science logo" class="shadow" width="100%">
+                        <img src="imgs/allen-school-logo.png" alt="Paul G. Allen School of Computer Science logo" class="shadow" width="100%">
                     </div>
                     <div id="hex-container" class="edu-card">
-                        <div class="hexagon">
+                        <div id="java-course" class="hexagon">
                             <p class="text-center m-0">
                                 <a href="https://courses.cs.washington.edu/courses/cse143/17wi/handouts/01.html" target="_blank">
                                     Java Programming
@@ -136,7 +133,32 @@
                 <div id="graph" class="row">
                     <canvas id="skills-chart" width="300" height="120"></canvas>
                 </div>
-                <p class="lead text-sm-center">Click here to see the technologies I used to build this website!</p>
+                <p id="modal-text" class="lead text-sm-center" data-toggle="modal" data-target="#technologies">
+                    Click here to see the technologies I used to build this website!
+                </p>
+                <div class="modal fade" id="technologies" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Technologies</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>HTML / CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>BootStrap</li>
+                                    <li>Chart.js</li>
+                                    <li>Quotes REST API</li>
+                                    <li>JQuery Flip</li>
+                                    <li>Git Version Control</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -270,7 +292,8 @@
                 <div class="row justify-content-center">
                     <div class="activity-card">
                         <div class="front shadow">
-                            Web Programming Teaching Assistant
+                            <p>Web Programming Teaching Assistant</p>
+                            <p class="date">Mar 2018 - Jun 2018</p>
                         </div>
                         <div class="back shadow">
                             As a teaching assistant, I led course sections and programming labs twice a week.
@@ -281,7 +304,8 @@
                     </div>
                     <div class="activity-card">
                         <div class="front shadow">
-                            Girls Who Code Committee Lead
+                            <p>Girls Who Code Committee Lead</p>
+                            <p class="date">Nov 2016 - Apr 2017</p>
                         </div>
                         <div class="back shadow">
                             As a committee lead, I organized events and workshops to promote computer science for
@@ -292,7 +316,8 @@
                     </div>
                     <div class="activity-card">
                         <div class="front shadow">
-                            Kinspire Logistics Coordinator
+                            <p>Kinspire Logistics Coordinator</p>
+                            <p class="date">Oct 2016 - Present</p>
                         </div>
                         <div class="back shadow">
                             Kinspire is a nonprofit organization that provides educational resources for underprivileged
@@ -303,7 +328,8 @@
                     </div>
                     <div class="activity-card">
                         <div class="front shadow">
-                            UW Raas Dance Team
+                            <p> UW Raas Dance Team </p>
+                            <p class="date">Oct 2016 - Apr 2018</p>
                         </div>
                         <div class="back shadow">
                             I was part of an Indian dance team that performs a traditional folk dance that originates
@@ -350,7 +376,6 @@
                 </div>
                 -->
             </div>
-            <!-- /.container -->
         </footer>
 
         <!-- Bootstrap core JavaScript -->
@@ -363,7 +388,7 @@
         <!-- Custom JavaScript for this theme -->
         <script src="bootstrap-scrolling-nav/js/scrolling-nav.js"></script>
 
-        <script src="quotes.js"></script>
+        <script src="js/quotes.js"></script>
 
     </body>
 </html>
