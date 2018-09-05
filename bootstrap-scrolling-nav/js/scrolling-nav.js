@@ -25,11 +25,4 @@
     target: '#mainNav',
     offset: 54
   });
-
-  // Add hover effect to elements that are touched
-  $('.hover').on('touchstart touchend', function(e) {
-    e.preventDefault();
-    $(this).toggleClass('hover_effect');
-  });
-
 })(jQuery); // End of use strict
