@@ -36,7 +36,7 @@ a {
     color: white;
 }
 
-a:hover {
+a:hover, a:focus {
     color: darkslategray;
     text-decoration: none;
 }
@@ -47,11 +47,6 @@ a:hover {
 
 .bg-gold {
     background-color: #e3cd56;
-}
-
-.bg-img:hover {
-    filter: brightness(100%);
-    transition: all .3s ease-in-out;
 }
 
 .title-box {
@@ -163,7 +158,7 @@ a:hover {
     text-align: center;
 }
 
-#modal-text:hover {
+#modal-text:hover, #modal-text:focus {
     color: deepskyblue;
     cursor: pointer;
 }
