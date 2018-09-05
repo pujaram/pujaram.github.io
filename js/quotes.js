@@ -15,7 +15,7 @@ window.onload = function () {
 };
 
 function getQuote() {
-    var url = "http://quotes.rest/qod.json?category=inspire";
+    var url = "https://quotes.rest/qod.json?category=inspire";
 
     fetch(url)
         .then(checkStatus)
