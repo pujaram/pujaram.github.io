@@ -1,6 +1,6 @@
 /* This is a custom stylesheet to design my portfolio. */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Arvo|Abel|Encode+Sans+Condensed|Khand|News+Cycle');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Arvo|Abel|Encode+Sans+Condensed|Khand|News+Cycle|Lora|Crimson+Text');
 
 header {
     height: 100vh;
@@ -13,7 +13,7 @@ header {
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 36pt;
 }
 
 h2 {
@@ -41,6 +41,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+blockquote {
+    font-family: 'Lora', 'Crimson Text', 'Times New Roman', serif;
+}
+
 .bg-light-blue {
     background-color: #b9eae5;
 }
@@ -52,6 +56,7 @@ a:hover, a:focus {
 .title-box {
     background: white;
     opacity: 0.94;
+    width: 50%;
 }
 
 #edu-container {
