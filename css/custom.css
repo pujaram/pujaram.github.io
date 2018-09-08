@@ -53,10 +53,10 @@ blockquote {
     background-color: #e3cd56;
 }
 
-.title-box {
+#title-box {
     background: white;
     opacity: 0.94;
-    width: 50%;
+    width: max-content;
 }
 
 #edu-container {
