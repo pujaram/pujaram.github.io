@@ -138,12 +138,12 @@ blockquote {
 
 #data-course {
     left: calc(35% + 242px);
-    top: -96px;
+    top: -170px;
 }
 
 #ai-course {
     left: calc(35% - 121px);
-    top: -100px;
+    top: -25px;
 }
 
 #graph {
