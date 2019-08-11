@@ -42,7 +42,9 @@ a:hover, a:focus {
 }
 
 blockquote {
+    display: block;
     font-family: 'Lora', 'Crimson Text', 'Times New Roman', serif;
+    padding: 1% 0;
 }
 
 .bg-light-blue {
@@ -131,18 +133,18 @@ blockquote {
     top: -15px;
 }
 
-#hardware-course {
+#ml-course {
     top: -20px;
 }
 
-#math-course {
+#data-course {
     left: calc(35% + 242px);
-    top: -96px;
+    top: -170px;
 }
 
-#data-course {
+#ai-course {
     left: calc(35% - 121px);
-    top: -100px;
+    top: -25px;
 }
 
 #graph {

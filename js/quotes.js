@@ -25,7 +25,6 @@ function getQuote() {
             quote = "The best thing about a boolean is even if you are wrong, you are only off by a bit.";
             author = "Anonymous";
             blockquote.innerText = "\"" + quote + "\"";
-            // alert(error);
         });
 }
 
@@ -53,17 +52,17 @@ function getQOD() {
 
 function getAuthor() {
     blockquote.style.color = "gray";
+    blockquote.style.height = blockquote.offsetHeight + "px";
     blockquote.innerText = "- " + author;
 }
 
 function resizeSection() {
+    blockquote.style.height = null;
     var educationWidth = document.getElementById("edu-text").offsetWidth;
     var eduSection = document.getElementById("education");
     if (educationWidth == 300) {
-        eduSection.style.paddingBottom = '350px';
+        eduSection.style.paddingBottom = "350px";
     } else {
-        eduSection.style.paddingBottom = '125px';
+        eduSection.style.paddingBottom = "125px";
     }
 }
-
-
