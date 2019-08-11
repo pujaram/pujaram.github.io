@@ -44,7 +44,6 @@ a:hover, a:focus {
 blockquote {
     display: block;
     font-family: 'Lora', 'Crimson Text', 'Times New Roman', serif;
-    padding: 1% 0;
 }
 
 .bg-light-blue {
@@ -139,12 +138,12 @@ blockquote {
 
 #data-course {
     left: calc(35% + 242px);
-    top: -170px;
+    top: -96px;
 }
 
 #ai-course {
     left: calc(35% - 121px);
-    top: -25px;
+    top: -100px;
 }
 
 #graph {
